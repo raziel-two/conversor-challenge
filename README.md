@@ -7,22 +7,33 @@ Este desafío forma parte del programa **Oracle Next Education (ONE)** y pone en
 
 ## 🚀 Funcionalidades
 - **Conversión en tiempo real:** Obtiene tasas de cambio actualizadas directamente desde la API de ExchangeRate-API.
-- **Menú Interactivo:** Interfaz de consola amigable para el usuario.
-- **Soporte de Múltiples Monedas:** Permite convertir entre diversas divisas.
+- **Menú Interactivo Extendido:** Interfaz de consola amigable con 12 opciones de conversión que incluyen Argentina, Brasil, Colombia, Venezuela, Perú y México.
+- **Soporte de Múltiples Monedas:** Permite conversiones de ida y vuelta para todas las divisas integradas.
+- **Estética Mejorada:** Uso de emojis para feedback de usuario y formato de números con separadores de miles y decimales configurados.
+
+
+## 🛡️ Control de Errores
+- **Validación de Entradas:** Implementación de `try-catch` para capturar errores cuando el usuario ingresa letras en lugar de números (`InputMismatchException`).
+- **Protección de Bucle:** Limpieza automática del búfer del Scanner para evitar ciclos infinitos tras un error.
+- **Validación de Rango:** Filtro lógico que asegura que solo se procesen las opciones disponibles en el menú (1-13).
 
 
 ## 🕹️ ¿Cómo funciona?
-1. Ejecuta la aplicación desde tu IDE o terminal.
-2. Selecciona la opción de conversión deseada en el menú interactivo.
-3. Ingresa el valor que deseas convertir.
-4. El programa consultará la API y te mostrará el resultado con la tasa actual.
+1. **Obtén tu API Key:** Regístrate en [ExchangeRate-API](https://www.exchangerate-api.com/) para obtener tu propia llave gratuita.
+2. **Configura el Proyecto:** Abre la clase `ConexionApi` y reemplaza el valor de la variable `apiKey` con tu llave personal:
+   ```java
+   String apiKey = "TU_API_KEY_AQUÍ";
+3. **Ejecución:** Inicia la aplicación desde tu IDE o terminal.
+4. **Selección de Moneda:** Elige la opción de conversión deseada (1-12) o la opción (13) para salir del programa.
+5. **Ingreso de Monto:** Escribe el valor que deseas convertir.
+6. **Resultado:** El programa consultará la API y te mostrará el valor final con la tasa actualizada y el código de moneda correspondiente.
 
 
 ## 🧠 Conceptos Aplicados
 - **Consumo de API:** Uso de `HttpClient`, `HttpRequest` y `HttpResponse`.
 - **Manipulación de JSON:** Conversión de datos externos a objetos Java mediante la librería **Gson**.
-- **Orientación a Objetos:** Implementación de clases, herencia y polimorfismo.
-- **Manejo de Excepciones:** Control de errores en la comunicación con la red y entrada de datos.
+- **Modelado de Datos:** Uso de **Records** para una estructura de datos más limpia y eficiente (`RespuestaApi`).
+- **Control de Excepciones:** Manejo proactivo de errores de entrada y fallos en la conexión de red.
 
 
 ## 🛠️ Tecnologías usadas
@@ -36,4 +47,4 @@ Challenge de Alura Latam, Creado por **Raziel** 💙
 
 
 ## 📂 Estado del proyecto
-⏳ **En desarrollo**
+✅ **Completado**
