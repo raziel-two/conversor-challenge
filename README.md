@@ -19,11 +19,14 @@ Este desafío forma parte del programa **Oracle Next Education (ONE)** y pone en
 
 
 ## 🕹️ ¿Cómo funciona?
-1. **Configuración de API Key:** Obtén tu llave en [ExchangeRate-API](https://www.exchangerate-api.com/) y colócala en la variable `apiKey` dentro de la clase `ConexionApi`.
-2. **Ejecución:** Inicia la aplicación desde tu IDE o terminal.
-3. **Selección de Moneda:** Elige la opción de conversión deseada (1-12) o la opción (13) para salir del programa.
-4. **Ingreso de Monto:** Escribe el valor que deseas convertir.
-5. **Resultado:** El programa consultará la API y te mostrará el valor final con la tasa actualizada y el código de moneda correspondiente.
+1. **Obtén tu API Key:** Regístrate en [ExchangeRate-API](https://www.exchangerate-api.com/) para obtener tu propia llave gratuita.
+2. **Configura el Proyecto:** Abre la clase `ConexionApi` y reemplaza el valor de la variable `apiKey` con tu llave personal:
+   ```java
+   String apiKey = "TU_API_KEY_AQUÍ";
+3. **Ejecución:** Inicia la aplicación desde tu IDE o terminal.
+4. **Selección de Moneda:** Elige la opción de conversión deseada (1-12) o la opción (13) para salir del programa.
+5. **Ingreso de Monto:** Escribe el valor que deseas convertir.
+6. **Resultado:** El programa consultará la API y te mostrará el valor final con la tasa actualizada y el código de moneda correspondiente.
 
 
 ## 🧠 Conceptos Aplicados
